@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View,TextInput, TouchableOpacity} from 'react-native';
 import {connect} from 'react-redux'
@@ -21,9 +13,9 @@ class Post extends Component<Props> {
     }
 
 // For Fetch request
-    // componentWillMount(){
-    //     this.props.new_posts()
-    // }
+    componentWillMount(){
+        this.props.new_posts()
+    }
 
 // For Fetch request
 
@@ -80,4 +72,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default connect(null, {create_posts})(Post);
+
+export default connect(null, {new_posts,create_posts})(Post);
