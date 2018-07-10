@@ -1,4 +1,4 @@
-import {NEW_POSTS, FETCH_POSTS} from '../actions/types'
+import {NEW_POSTS, FETCH_POSTS, CREATE_POST} from '../actions/types'
 
 const initialState = {
     items :[],
@@ -13,7 +13,12 @@ export default function (state = initialState, action){
           return{
             ...state,
             items: action.payload
-          }
+          };
+          case CREATE_POST : 
+          return{
+            ...state,
+            item: action.payload
+          };
           default : 
           return state;
     }
