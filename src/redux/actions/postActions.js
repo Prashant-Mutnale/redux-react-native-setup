@@ -1,4 +1,5 @@
 import {FETCH_POSTS, NEW_POSTS, CREATE_POST} from './types'
+import { Actions } from 'react-native-router-flux';
 
 
 // fetch
@@ -27,6 +28,7 @@ export const create_posts = (postdata) => dispatch =>{
       })
       .then((Response)=>{
           console.log(Response)
+          Actions.home()
       })
       .then(res=>res.json())
       .then(post => 
